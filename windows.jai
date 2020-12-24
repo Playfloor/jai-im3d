@@ -190,28 +190,11 @@ Im3d_SetContext :: (ctx : *Im3d_Context) #foreign im3d "?SetContext@Im3d@@YAXAEA
 
 Im3d_MergeContexts :: (source : *Im3d_Context, dest : *Im3d_Context) #foreign im3d "?MergeContexts@Im3d@@YAXAEAUContext@1@AEBU21@@Z";
 
-Im3d_GetPrimitiveCount :: inline (type : Im3d_DrawPrimitiveType) -> u32
-{
-	Context_getPrimitiveCount :: (ctx : *Im3d_Context, type : Im3d_DrawPrimitiveType) -> u32 #foreign im3d "?getPrimitiveCount@Context@Im3d@@QEBAIW4DrawPrimitiveType@2@@Z";
+Im3d_Context_GetPrimitiveCount :: (ctx : *Im3d_Context, type : Im3d_DrawPrimitiveType) -> u32 #foreign im3d "?getPrimitiveCount@Context@Im3d@@QEBAIW4DrawPrimitiveType@2@@Z";
+Im3d_Context_GetTextCount :: (ctx : *Im3d_Context) -> u32 #foreign im3d "?getTextCount@Context@Im3d@@QEBAIXZ";
+Im3d_Context_GetLayerCount :: (ctx : *Im3d_Context) -> u32 #foreign im3d "?getLayerCount@Context@Im3d@@QEBAIXZ";
 
-	return Context_getPrimitiveCount (Im3d_GetContext (), type);
-}
-
-Im3d_GetTextCount :: inline () -> u32
-{
-	Context_getTextCount :: (ctx : *Im3d_Context) -> u32 #foreign im3d "?getTextCount@Context@Im3d@@QEBAIXZ";
-
-	return Context_getTextCount (Im3d_GetContext ());
-}
-
-Im3d_GetLayerCount :: inline () -> u32
-{
-	Context_getLayerCount :: (ctx : *Im3d_Context) -> u32 #foreign im3d "?getLayerCount@Context@Im3d@@QEBAIXZ";
-
-	return Context_getLayerCount (Im3d_GetContext ());
-}
-
-Im3d_SetCullFrustum :: inline (data : *Im3d_AppData, frustum : Mat4, ndcZNegativeOneToOne : bool)
+Im3d_AppData_SetCullFrustum :: inline (data : *Im3d_AppData, frustum : Mat4, ndcZNegativeOneToOne : bool)
 {
 	AppData_setCullFrustum :: (data : *Im3d_AppData, frustum : *Mat4, ndcZNegativeOneToOne : bool) #foreign im3d "?setCullFrustum@AppData@Im3d@@QEAAXAEBUMat4@2@_N@Z";
 	AppData_setCullFrustum (data, *frustum, ndcZNegativeOneToOne);
