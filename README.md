@@ -1,6 +1,8 @@
 # Im3d for Jai
 [Im3d](https://github.com/john-chapman/im3d) bindings for the [Jai](https://youtu.be/TH9VCN6UkyQ) programming language.
 
+![Screensot](docs/screenshot.png)
+
 ## Disclaimer
 **The Jai programming language is still in closed beta as of December 27 2020.**
 
