@@ -102,7 +102,7 @@ im3d_new_frame :: (delta_time : float)
 	data.cursorRayOrigin = ray_origin;
 	data.cursorRayDirection = ray_direction;
 
-	Im3d_SetCullFrustum (data, camera.view_projection_matrix, true);
+	Im3d_AppData_SetCullFrustum (data, camera.view_projection_matrix, true);
 
 	data.keyDown[Im3d_Key.Select] = is_mouse_button_down (.LEFT);
 
