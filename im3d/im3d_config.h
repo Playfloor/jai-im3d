@@ -8,7 +8,7 @@
 //#define IM3D_FREE(ptr) free(ptr) 
 
 // User-defined API declaration (e.g. __declspec(dllexport)).
-//#define IM3D_API
+#define IM3D_API __declspec (dllexport)
 
 // Use a thread-local context pointer.
 //#define IM3D_THREAD_LOCAL_CONTEXT_PTR 1

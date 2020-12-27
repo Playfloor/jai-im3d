@@ -5,7 +5,7 @@
 #define IM3D_VERSION "1.16"
 
 #ifndef IM3D_API
-	#define IM3D_API __declspec (dllexport)
+	#define IM3D_API
 #endif
 
 #ifndef IM3D_ASSERT
