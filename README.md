@@ -12,7 +12,7 @@ The library currently uses a **dll**, which is not necessarily the best choice s
 Currently, only Windows is supported.
 
 ## Dependencies
-This library is currently dependant on my [linear algebra module](https://github.com/ostef/jai-modules) for `Vec2` and `Vec4` as well as the `Basic` an `Math` modules provided with the Jai compiler.
+This library is currently dependant on my [linear algebra module](https://github.com/ostef/jai-modules) for `Vec2` and `Vec4` as well as the `Basic` and `Math` modules provided with the Jai compiler.
 
 ## Naming
 We try to make using the library in Jai as close as possible to using it in C++:
