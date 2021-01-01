@@ -6,8 +6,6 @@
 ## Disclaimer
 **The Jai programming language is still in closed beta as of December 27 2020.**
 
-The library currently uses a **dll**, which is not necessarily the best choice so we'll eventually change it to link statically if possible. 
-
 ## Supported platforms
 Currently, only Windows is supported.
 

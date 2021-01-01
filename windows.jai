@@ -204,5 +204,13 @@ Im3d_AppData_SetCullFrustum :: inline (data : *Im3d_AppData, frustum : Mat4, ndc
 
 #import "Basic";
 
-#if IMPORT_DEBUG_SYMBOLS  im3d :: #foreign_library "win_debug/Im3d";
-else                      im3d :: #foreign_library "win/Im3d";
+#if STATIC_LINKING
+{
+	#if IMPORT_DEBUG_SYMBOLS  im3d :: #foreign_library, no_dll "win_debug/Im3d";
+	else                      im3d :: #foreign_library, no_dll "win/Im3d";
+}
+else
+{
+	#if IMPORT_DEBUG_SYMBOLS  im3d :: #foreign_library "win_debug/Im3d";
+	else                      im3d :: #foreign_library "win/Im3d";
+}
